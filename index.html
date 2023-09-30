@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesaplama Aracı</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- import fontawesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <h1 class="heading">Harcama Tablosu</h1>
+    <main>
+        <div class="container">
+            <h3 class="greet">Hoşgeldin,
+                <input type="text" id="user-input" placeholder="İsminizi Giriniz">
+            </h3>
+    
+            <!-- form alanı -->
+            <form action="">
+                <div class="double">
+                    <div class="form-field">
+                        <label for="name-input">  Ürün Adı</label>
+                        <input type="text" id="name-input">
+                    </div>
+                    <div class="form-field">
+                        <label for="price-input">  Fiyat</label>
+                        <input type="number" id="price-input">
+                    </div>
+                </div>
+                <div class="double">
+                    <div class="form-check-field">
+                        <input id="status-check" type="checkbox">
+                        <label for="status-check">Kredi Kartı</label>
+                    </div>
+                    <button id="add-btn">Ekle</button>
+                </div>
+            </form>
+            <!-- toplama Alanı -->
+            <div class="sum">
+                Toplam Harcama <span id="sum-info">0</span> &#x20BA;
+            </div>    
+    
+            <!-- Filitreleme -->
+            <select name="" id="select">
+                <!-- ödenen  nakit
+                    ödenmeyen  kredi kartı -->
+                <option value="all">Hepsi</option>
+                <option value="paid">Nakit Ödenen</option>  
+                <option value="not-paid">Kredi Kartı</option>
+            </select>
+
+            <!-- ödenen ve ödenmeyenlerin harcaması -->
+            <div class="paids-and-not-pains">
+                <p class="paid"> Nakit Ödenen <span id="paid-info">0</span> &#x20BA; </p>
+                <p class="not-paid"> Kredi Kartı Harcama <span id="not-paid-info">0</span> &#x20BA; </p>
+            </div>
+          
+
+        </div>
+    
+        <!-- listeleme Alanı -->
+        <div class="list">
+           
+        </div>
+    </main>
+   
+    
+
+    <script src="main.js"></script>
+</body>
+</html>
+
